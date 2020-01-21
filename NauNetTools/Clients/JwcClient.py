@@ -119,7 +119,10 @@ class JwcClient(SSOClient):
             self.__jwcFunctionDict = {}
             soup = BeautifulSoup(content_html, "html.parser")
             tree = soup.find('ul', id='tt')
-            self.__tree_node_selector(Tag(tree), self.__jwcFunctionDict)
+            if isinstance(tree, Tag):
+                self.__tree_node_selector(tree, self.__jwcFunctionDict)
+            else:
+                raise IOError('Tag found error!')
 
     def __tree_node_selector(self, soup_node_tree: Tag, father_dict: dict):
         for li in soup_node_tree.find_all('li', recursive=False):
