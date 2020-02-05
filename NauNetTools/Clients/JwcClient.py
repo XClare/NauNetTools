@@ -1,6 +1,7 @@
 from enum import IntEnum
 from urllib import parse
 
+# noinspection PyProtectedMember
 from bs4 import BeautifulSoup, Tag
 from requests import Response
 
