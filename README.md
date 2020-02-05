@@ -1,7 +1,12 @@
 # NauNetTools
 
 Network tools for Nanjing Audit University  
-Can be manually installed by pip  
+  
+Now including SSO and educational administration login client.  
+These tools may help you custom your own university website spider.  
+
+# Requirements  
+requests, bs4, pycryptodome  
 
 ## Attention: Only For References!!  
 
